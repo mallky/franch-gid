@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production --define process.env.NODE_ENV='production'",
     "server": "node server.js"
   },
   "devDependencies": {
@@ -23,6 +23,7 @@
     "mini-css-extract-plugin": "^0.2.0",
     "optimize-css-assets-webpack-plugin": "^4.0.0",
     "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^4.2.0",
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^3.1.1"

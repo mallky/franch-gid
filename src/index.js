@@ -1,7 +1,21 @@
 import "./main.less";
-console.log(`I'm a silly entry point`);
-console.log(`I'm a silly entry point`);
+import 'bootstrap';
+import $ from 'jquery';
+import Navigation from './wrappers/navigation/navigation';
 
-const arr = [1, 2, 3];
-const iAmJavascriptES6 = () => console.log(...arr);
-window.iAmJavascriptES6 = iAmJavascriptES6;
+class App {
+  init () {
+    this.root = document.getElementById('app');
+    const navigation = new Navigation(this.root);
+
+    navigation.init();
+  }
+}
+
+const app = new App();
+
+app.init();
+
+if (process.env.NODE_ENV !== 'production') {
+  console.log('Dev mode On!');
+}

@@ -3,13 +3,26 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const localIp = require('my-local-ip')();
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const path = require('path');
 
 const extractLess = new ExtractTextPlugin({
-  filename: "[name].[contenthash].css",
+  filename: "[name].min.css",
   disable: process.env.NODE_ENV === "development"
 });
 
 module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
+  },
+  devtool: 'inline-source-map',
+  devServer: {
+    open: true,
+    port: 3000,
+    host: localIp
+  },
   module: {
     rules: [
       {
