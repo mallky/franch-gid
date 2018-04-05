@@ -2,6 +2,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const localIp = require('my-local-ip')();
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
@@ -87,6 +88,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"
+    }),
+    new FaviconsWebpackPlugin({
+      logo: './images/logogid.png',
+      prefix: 'favicons/'
     }),
     extractLess
   ]

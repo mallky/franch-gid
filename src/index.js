@@ -1,14 +1,17 @@
 import "./main.less";
 import 'bootstrap';
-import $ from 'jquery';
-import Navigation from './wrappers/navigation/navigation';
+
+import Main from './wrappers/main/main';
+import Footer from './wrappers/footer/footer';
 
 class App {
   init () {
     this.root = document.getElementById('app');
-    const navigation = new Navigation(this.root);
+    const footer = new Footer(this.root);
+    const main = new Main(this.root);
 
-    navigation.init();
+    main.init();
+    footer.init();
   }
 }
 

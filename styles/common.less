@@ -1,0 +1,56 @@
+@main-orange: #E69D09;
+@dark-orange: #ac7708;
+@main-bg: #FFFFFF;
+@gray: #DEDEDE;
+
+button:focus, input:focus {
+  outline: none;
+}
+
+.custom-btn {
+  color: #000;
+  font-weight: bold;
+  text-transform: lowercase;
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  border: 2px solid @main-orange;
+  cursor: pointer;
+  min-width: 14rem;
+
+  &.orange-button {
+    background: @main-orange;
+
+    &:hover {
+      background: white;
+      color: @main-orange;
+    }
+  }
+
+  &.white-button {
+    background: #FFF;
+    color: @main-orange;
+
+    &:hover {
+      background: @main-orange;
+      color: black;
+    }
+  }
+}
+
+span {
+  &.orange-text {
+    color: @main-orange;
+  }
+}
+
+.big-heading {
+  font-size: 4rem;
+}
+
+.normal-heading {
+  font-size: 2rem;
+}
+
+.small-text {
+  font-size: 0.8rem;
+}
