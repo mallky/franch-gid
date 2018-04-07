@@ -1,0 +1,104 @@
+html {
+  font-size: 6px !important;
+  .img-fluid {
+    width: 57px;
+    height: 50px;
+  }
+}
+
+// для мобильных девайсов
+@media screen and (min-width: 768px) and (orientation: portrait) {
+  html {
+    #app {
+      & > main {
+        #about {
+          background-position-x: -150px;
+        }
+      }
+    }
+  }
+}
+
+// Супер малые девайсы («ландшафтные телефоны», >= 320px)
+@media (min-width: 320px) {
+  html {
+    font-size: 6px !important;
+    #gid-first {
+      .gid-first-content {
+        top: 0;
+        padding: 4rem;
+      }
+    }
+    .custom-rounded {
+      padding-bottom: 0 !important;
+    }
+
+    #for-who {
+      .mac-book {
+        top: -12rem;
+        width: 311px;
+        height: 311px;
+      }
+    }
+  }
+}
+
+// Малые девайсы («ландшафтные телефоны», >= 576px)
+@media (min-width: 576px) {
+  html {
+    font-size: 8px !important;
+    #gid-first {
+      .gid-first-content {
+        top: 8rem;
+        padding: 0;
+      }
+    }
+    .custom-rounded {
+      padding-bottom: 3rem !important;
+    }
+
+    #for-who {
+      .mac-book {
+        top: -2rem;
+        width: 311px;
+        height: 311px;
+      }
+    }
+  }
+}
+
+// Средние девайсы («таблетки», >= 768px)
+@media (min-width: 768px) {
+  html {
+    font-size: 10px !important;
+    #for-who {
+      .mac-book {
+        top: -7rem;
+        width: 311px;
+        height: 311px;
+      }
+    }
+  }
+}
+
+// Большие девайсы (десктопы, >= 992px)
+@media (min-width: 992px) {
+  html {
+    font-size: 12px !important;
+
+    #for-who {
+      .mac-book {
+        top: -7rem;
+        width: 550px;
+        height: 550px;
+      }
+    }
+  }
+}
+
+// Экстрабольшие девайсы (большие десктопы, >= 1200px)
+@media (min-width: 1200px) {
+  html {
+    font-size: 14px !important;
+  }
+}

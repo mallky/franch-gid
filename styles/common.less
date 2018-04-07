@@ -2,6 +2,8 @@
 @dark-orange: #ac7708;
 @main-bg: #FFFFFF;
 @gray: #DEDEDE;
+@bg-gray: #f3f3f3;
+@box-shadow: 0 1rem 1rem 1rem rgba(191, 194, 195, 0.17);
 
 button:focus, input:focus {
   outline: none;
@@ -16,6 +18,7 @@ button:focus, input:focus {
   border: 2px solid @main-orange;
   cursor: pointer;
   min-width: 14rem;
+  font-size: 1.5rem;
 
   &.orange-button {
     background: @main-orange;
@@ -48,9 +51,20 @@ span {
 }
 
 .normal-heading {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .small-text {
-  font-size: 0.8rem;
+  font-size: 1.5rem;
+}
+
+.custom-rounded {
+  border-radius: 0.4em;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-color: white;
+}
+
+.card {
+  border-radius: 0.8rem;
 }

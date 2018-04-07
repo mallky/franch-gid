@@ -1,0 +1,28 @@
+@import "../../../styles/common";
+@import "../../../styles/mixins";
+
+#for-who {
+  padding: 5rem;
+
+  .mac-book {
+    position: absolute;
+    right: 0;
+    top: -7rem;
+    width: 311px;
+    height: 311px;
+  }
+
+  .card {
+    background-color: @bg-gray !important;
+    .round-box(@gray);
+    box-shadow: @box-shadow;
+
+    .card-body {
+      background-color: @bg-gray;
+    }
+
+    & > div:not(.custom-rounded) {
+      border-radius: 0.8rem;
+    }
+  }
+}

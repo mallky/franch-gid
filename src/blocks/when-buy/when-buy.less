@@ -1,0 +1,67 @@
+@import "../../../styles/mixins";
+
+#when-buy {
+  background-image: url('../../../images/bg-when-buy.png');
+  .bg-img(center, center, static);
+
+  .album {
+    .row {
+      & > .col-md-4 {
+        & > div {
+          background-color: white !important;
+          background-size: 276px 1800px !important;
+        }
+        & > .card {
+          &.i1 {
+            background: url('../../../images/sprites-for-buy.png') -50px -1150px no-repeat;
+          }
+          &.i2 {
+            background: url('../../../images/sprites-for-buy.png') -50px -1400px no-repeat;
+          }
+          &.i3 {
+            background: url('../../../images/sprites-for-buy.png') -100px -944px no-repeat;
+          }
+          &.i4 {
+            background: url('../../../images/sprites-for-buy.png') -100px -155px no-repeat;
+          }
+          &.i5 {
+            background: url('../../../images/sprites-for-buy.png') -17px 15px no-repeat;
+          }
+          &.i6 {
+            background: url('../../../images/sprites-for-buy.png') -50px -345px no-repeat;
+          }
+          &.i7 {
+            background: url('../../../images/sprites-for-buy.png') -50px -535px no-repeat;
+          }
+          &.i8 {
+            background: url('../../../images/sprites-for-buy.png') -50px -1630px no-repeat;
+          }
+          &.i9 {
+            background: url('../../../images/sprites-for-buy.png') -50px -735px no-repeat;
+          }
+        }
+      }
+    }
+  }
+
+  .card {
+    height: 13rem;
+
+    .card-body {
+      .display-center();
+
+      .small-text {
+        text-align: center;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  #carousel {
+    margin: 4rem;
+    img {
+      max-width: 35rem;
+      height: auto;
+    }
+  }
+}
