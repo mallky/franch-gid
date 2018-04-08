@@ -14,7 +14,7 @@ export default class BecomeOwner extends Column {
   changeImage() {
     $(window).on('load resize', () => {
       const imgSrc = $(window).width() <= 993
-        ? '../../../images/transformed-arrow-icons.png' : '../../../images/arrow-icons.png';
+        ? './images/transformed-arrow-icons.png' : './images/arrow-icons.png';
       $('.image-container').find('.man-img')
         .find('img:last-child').attr('src', imgSrc);
     });
