@@ -46,7 +46,7 @@ export default class Main extends Column {
     const isIPad = navigator.userAgent.match(/iPad/i) != null;
 
     if (isIPad) {
-      $('#app').find('main').find('#about').css('background-position-x', '-750px');
+      $('#app').find('main').find('#about').css('background-position-x', '-2250px');
     }
   }
 }

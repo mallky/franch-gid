@@ -8,6 +8,14 @@ html {
     }
   }
 
+  #app {
+    & > main {
+      #about {
+        background-position-x: -140px;
+      }
+    }
+  }
+
   .image-container {
     .man-img {
       img:first-child {
@@ -29,12 +37,36 @@ html {
 }
 
 // для мобильных девайсов
+@media screen and (min-width: 576px) and (orientation: landscape) {
+  html {
+    #app {
+      & > main {
+        #about {
+          background-position-x: 30px;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 768px) and (orientation: portrait) {
   html {
     #app {
       & > main {
         #about {
-          background-position-x: -150px;
+          background-position-x: -70px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  html {
+    #app {
+      & > main {
+        #about {
+          background-position-x: 30px;
         }
       }
     }
@@ -179,5 +211,13 @@ html {
 @media (min-width: 1200px) {
   html {
     font-size: 14px !important;
+
+    #app {
+      & > main {
+        #about {
+          background-position-x: center;
+        }
+      }
+    }
   }
 }
