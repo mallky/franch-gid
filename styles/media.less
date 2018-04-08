@@ -7,6 +7,15 @@ html {
       height: 50px;
     }
   }
+  footer {
+    .small-text {
+      font-size: 1.3rem;
+      padding-right: 0 !important;
+    }
+    .text-right {
+      font-size: 1.1rem;
+    }
+  }
 
   #app {
     & > main {
@@ -21,16 +30,16 @@ html {
       img:first-child {
         position: relative;
         top: 4rem;
-        width: calc(35rem / 1.5);
-        height: calc(75rem / 1.5);
+        width: calc(35rem / 2);
+        height: calc(75rem / 2);
       }
 
       img:last-child {
         position: relative;
         top: 5rem;
         margin-right: 5rem;
-        width: calc(25rem / 1.2);
-        height: calc(50rem / 1.2);
+        width: calc(25rem / 2);
+        height: calc(50rem / 2);
       }
     }
   }
@@ -49,7 +58,7 @@ html {
   #mac {
     img {
       width: auto;
-      height: calc(749px / 3.5);
+      height: calc(749px / 4.4);
       margin: auto;
       position: static !important;
     }
@@ -110,6 +119,9 @@ html {
         top: 0;
         padding: 4rem;
       }
+      br {
+        display: none;
+      }
     }
     .custom-rounded {
       padding-bottom: 0 !important;
@@ -145,6 +157,29 @@ html {
   }
 }
 
+@media (min-width: 376px) {
+  html {
+    .image-container {
+      .man-img {
+        img:first-child {
+          position: relative;
+          top: 4rem;
+          width: calc(35rem / 1.5);
+          height: calc(75rem / 1.5);
+        }
+
+        img:last-child {
+          position: relative;
+          top: 5rem;
+          margin-right: 5rem;
+          width: calc(25rem / 1.2);
+          height: calc(50rem / 1.2);
+        }
+      }
+    }
+  }
+}
+
 // Малые девайсы («ландшафтные телефоны», >= 576px)
 @media (min-width: 576px) {
   html {
@@ -153,6 +188,9 @@ html {
       .gid-first-content {
         top: 8rem;
         padding: 0;
+      }
+      br {
+        display: block;
       }
     }
     .custom-rounded {
@@ -170,6 +208,38 @@ html {
     #when-buy {
       .card {
         width: auto;
+      }
+    }
+
+    #mac {
+      img {
+        width: auto;
+        height: calc(749px / 3.75);
+        margin: auto;
+        position: static !important;
+      }
+    }
+
+    @media (min-width: 576px) {
+      html {
+        .image-container {
+          .man-img {
+            img:first-child {
+              position: relative;
+              top: 4rem;
+              width: calc(35rem / 1.5);
+              height: calc(75rem / 1.5);
+            }
+
+            img:last-child {
+              position: relative;
+              top: 5rem;
+              margin-right: 5rem;
+              width: calc(25rem / 1.1);
+              height: calc(50rem / 1.1);
+            }
+          }
+        }
       }
     }
   }
@@ -263,7 +333,7 @@ html {
       .container {
         & > div {
           display: block !important;
-          height: 30rem;
+          height: 23rem;
         }
       }
       img {

@@ -11,6 +11,7 @@ import WhenBuy from '../../blocks/when-buy/when-buy';
 import StudySystem from '../../blocks/study-system/study-system';
 import Mac from '../../blocks/mac/mac';
 import Garant from '../../blocks/garant/garant';
+import Map from '../../blocks/map/map';
 
 const main = require('./main.html');
 
@@ -29,6 +30,7 @@ export default class Main extends Column {
     const studySystem = new StudySystem(mainContainer);
     const mac = new Mac(mainContainer);
     const garant = new Garant(mainContainer);
+    const map = new Map(mainContainer);
 
     modalWindow.init();
     doneModalWindow.init();
@@ -40,6 +42,7 @@ export default class Main extends Column {
     studySystem.init();
     mac.init();
     garant.init();
+    map.init();
 
     this.askForCall();
     this.forIpad();
