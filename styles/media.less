@@ -34,6 +34,34 @@ html {
       }
     }
   }
+
+  .custom-study {
+    img {
+      width: calc(411px / 1.3);
+      height: calc(219px / 1.3);
+    }
+  }
+
+  #study-system {
+    padding-bottom: 2rem;
+  }
+
+  #mac {
+    img {
+      width: auto;
+      height: calc(749px / 3.5);
+      margin: auto;
+      position: static !important;
+    }
+  }
+
+  #garant {
+    padding: 5rem;
+
+    img {
+      padding-left: 1.5rem;
+    }
+  }
 }
 
 // для мобильных девайсов
@@ -76,7 +104,7 @@ html {
 // Супер малые девайсы («ландшафтные телефоны», >= 320px)
 @media (min-width: 320px) {
   html {
-    font-size: 7px !important;
+    font-size: 8px !important;
     #gid-first {
       .gid-first-content {
         top: 0;
@@ -217,6 +245,48 @@ html {
         #about {
           background-position-x: center;
         }
+      }
+    }
+
+    .custom-study {
+      img {
+        width: calc(411px / 1.1);
+        height: calc(219px / 1.1);
+      }
+    }
+
+    #study-system {
+      padding-bottom: 10rem;
+    }
+
+    #mac {
+      .container {
+        & > div {
+          display: block !important;
+          height: 30rem;
+        }
+      }
+      img {
+        width: auto;
+        height: calc(749px / 1.5);
+        position: relative !important;
+        left: -15rem !important;
+        top: -10rem !important;
+        float: left;
+      }
+
+      .normal-heading {
+        position: relative !important;
+        left: -15rem;
+        top: 4rem;
+        padding: 0 !important;
+      }
+    }
+
+    #garant {
+      img {
+        height: auto;
+        width: calc(601px / 1.2);
       }
     }
   }

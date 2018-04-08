@@ -8,6 +8,9 @@ import GidFirst from '../../blocks/gid-first/gid-first';
 import ForWho from '../../blocks/for-who/for-who';
 import Cooperation from '../../blocks/cooperation/cooperation';
 import WhenBuy from '../../blocks/when-buy/when-buy';
+import StudySystem from '../../blocks/study-system/study-system';
+import Mac from '../../blocks/mac/mac';
+import Garant from '../../blocks/garant/garant';
 
 const main = require('./main.html');
 
@@ -23,6 +26,9 @@ export default class Main extends Column {
     const forWho = new ForWho(mainContainer);
     const cooperation = new Cooperation(mainContainer);
     const whenBuy = new WhenBuy(mainContainer);
+    const studySystem = new StudySystem(mainContainer);
+    const mac = new Mac(mainContainer);
+    const garant = new Garant(mainContainer);
 
     modalWindow.init();
     doneModalWindow.init();
@@ -31,6 +37,9 @@ export default class Main extends Column {
     forWho.init();
     cooperation.init();
     whenBuy.init();
+    studySystem.init();
+    mac.init();
+    garant.init();
 
     this.askForCall();
     this.forIpad();
@@ -46,7 +55,8 @@ export default class Main extends Column {
     const isIPad = navigator.userAgent.match(/iPad/i) != null;
 
     if (isIPad) {
-      $('#app').find('main').find('#about').css('background-position-x', '-2250px');
+     $('#about').css('background-attachment', 'scroll');
+     $('#cooperation').css('background-attachment', 'scroll');
     }
   }
 }
