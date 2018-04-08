@@ -1,8 +1,30 @@
 html {
-  font-size: 6px !important;
-  .img-fluid {
-    width: 57px;
-    height: 50px;
+  font-size: 8px !important;
+
+  footer, #about {
+    .img-fluid {
+      width: 57px;
+      height: 50px;
+    }
+  }
+
+  .image-container {
+    .man-img {
+      img:first-child {
+        position: relative;
+        top: 4rem;
+        width: calc(35rem / 1.5);
+        height: calc(75rem / 1.5);
+      }
+
+      img:last-child {
+        position: relative;
+        top: 5rem;
+        margin-right: 5rem;
+        width: calc(25rem / 1.2);
+        height: calc(50rem / 1.2);
+      }
+    }
   }
 }
 
@@ -22,7 +44,7 @@ html {
 // Супер малые девайсы («ландшафтные телефоны», >= 320px)
 @media (min-width: 320px) {
   html {
-    font-size: 6px !important;
+    font-size: 7px !important;
     #gid-first {
       .gid-first-content {
         top: 0;
@@ -40,13 +62,33 @@ html {
         height: 311px;
       }
     }
+
+    #when-buy {
+      .album {
+        .row {
+          .col-md-4 {
+            width: auto;
+            margin: auto;
+
+            .card {
+              height: 20rem;
+              width: 35rem;
+
+              .small-text {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 // Малые девайсы («ландшафтные телефоны», >= 576px)
 @media (min-width: 576px) {
   html {
-    font-size: 8px !important;
+    font-size: 10px !important;
     #gid-first {
       .gid-first-content {
         top: 8rem;
@@ -64,6 +106,12 @@ html {
         height: 311px;
       }
     }
+
+    #when-buy {
+      .card {
+        width: auto;
+      }
+    }
   }
 }
 
@@ -76,6 +124,25 @@ html {
         top: -7rem;
         width: 311px;
         height: 311px;
+      }
+    }
+    #when-buy {
+      .album {
+        .row {
+          .col-md-4 {
+            width: auto;
+            margin: auto;
+
+            .card {
+              height: 13rem;
+              width: auto;
+
+              .small-text {
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -91,6 +158,18 @@ html {
         top: -7rem;
         width: 550px;
         height: 550px;
+      }
+    }
+
+    .image-container {
+      .man-img {
+        img:last-child {
+          position: relative;
+          top: 12rem;
+          height: calc(35rem / 1.5);
+          width: calc(80rem / 1.5);
+          transform: rotate(0deg);
+        }
       }
     }
   }

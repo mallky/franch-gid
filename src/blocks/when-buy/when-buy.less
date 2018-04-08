@@ -1,4 +1,5 @@
 @import "../../../styles/mixins";
+@import "../../../styles/common";
 
 #when-buy {
   background-image: url('../../../images/bg-when-buy.png');
@@ -45,23 +46,74 @@
   }
 
   .card {
-    height: 13rem;
-
     .card-body {
       .display-center();
 
       .small-text {
         text-align: center;
-        font-size: 1.2rem;
       }
     }
   }
 
   #carousel {
     margin: 4rem;
+
+    &.carousel.slide {
+      max-width: 25rem;
+    }
+
     img {
-      max-width: 35rem;
+      max-width: 25rem;
       height: auto;
     }
+
+    .carousel-indicators {
+      li {
+        background-color: darkgray;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .active {
+        background-color: black;
+      }
+    }
+
+    .carousel-control-prev {
+      left: -4rem;
+    }
+
+    .carousel-control-next {
+      right: -4rem;
+    }
+
+    .carousel-inner {
+      .display-center();
+
+      .carousel-item {
+        max-width: 25rem;
+      }
+    }
   }
+
+  .thanks {
+    margin-top: 6rem;
+
+    .p-4 {
+      .display-center();
+      flex-direction: column;
+    }
+  }
+
+  #become-owner {
+    top: 9rem;
+  }
+
+  .last-block-buy {
+    padding-top: 13rem;
+    padding-bottom: 3rem;
+    background-color: @bg-gray;
+  };
 }
