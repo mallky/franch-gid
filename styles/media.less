@@ -1,5 +1,5 @@
 html {
-  font-size: 8px !important;
+  font-size: 6px !important;
 
   footer, #about {
     .img-fluid {
@@ -36,10 +36,10 @@ html {
 
       img:last-child {
         position: relative;
-        top: 5rem;
-        margin-right: 5rem;
-        width: calc(25rem / 2);
-        height: calc(50rem / 2);
+        top: 0;
+        margin-right: 9rem;
+        width: calc(25rem / 1.4);
+        height: calc(50rem / 1.4);
       }
     }
   }
@@ -113,7 +113,8 @@ html {
 // Супер малые девайсы («ландшафтные телефоны», >= 320px)
 @media (min-width: 320px) {
   html {
-    font-size: 8px !important;
+    font-size: 6px !important;
+
     #gid-first {
       .gid-first-content {
         top: 0;
@@ -130,6 +131,7 @@ html {
     #for-who {
       .mac-book {
         top: -12rem;
+        right: -8rem;
         width: 311px;
         height: 311px;
       }
@@ -159,6 +161,8 @@ html {
 
 @media (min-width: 376px) {
   html {
+    font-size: 8px !important;
+
     .image-container {
       .man-img {
         img:first-child {
@@ -177,13 +181,30 @@ html {
         }
       }
     }
+
+    #for-who {
+      .mac-book {
+        right: 0;
+      }
+    }
   }
 }
-
+@media screen and (min-width: 320px) and (orientation: landscape) {
+  html {
+    font-size: 7px !important;
+    #app {
+      & > main {
+        #about {
+          background-position-x: center;
+        }
+      }
+    }
+  }
+}
 // Малые девайсы («ландшафтные телефоны», >= 576px)
 @media (min-width: 576px) {
   html {
-    font-size: 10px !important;
+    font-size: 9px !important;
     #gid-first {
       .gid-first-content {
         top: 8rem;
@@ -338,7 +359,7 @@ html {
       }
       img {
         width: auto;
-        height: calc(749px / 1.5);
+        height: calc(749px / 1.8);
         position: relative !important;
         left: -15rem !important;
         top: -10rem !important;
