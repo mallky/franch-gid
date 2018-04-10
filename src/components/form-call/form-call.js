@@ -23,7 +23,7 @@ export default class Contact extends Column {
 
           form.classList.add('was-validated');
         } else {
-          var $form = $('form').eq(0);
+          const $form = $('form').eq(0).is(":visible") ? $('form').eq(0) : $('form').eq(1);
           $.ajax({
             type: $form.attr('method'),
             url: 'send.php',
