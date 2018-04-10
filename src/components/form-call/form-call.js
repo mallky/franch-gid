@@ -23,16 +23,18 @@ export default class Contact extends Column {
 
           form.classList.add('was-validated');
         } else {
-          var $form = $('form');
+          var $form = $('form').eq(0);
           $.ajax({
             type: $form.attr('method'),
             url: 'send.php',
             data: $form.serialize()
           }).done(function() {
             console.log('success');
+            Contact.closeDialog();
             $('#done').modal('show');
           }).fail(function() {
             console.log('fail');
+            Contact.closeDialog();
             $('#fail').modal('show');
           });
 
@@ -41,5 +43,10 @@ export default class Contact extends Column {
         }
       }, false);
     });
+  }
+
+  static closeDialog() {
+    $('#getPresentationModalCall').modal('hide');
+    $('#getPresentationModal').modal('hide');
   }
 }
