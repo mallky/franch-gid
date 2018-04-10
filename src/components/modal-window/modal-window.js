@@ -7,7 +7,7 @@ export default class ModalWindow extends Column {
   init() {
     super.init(modalWindow);
 
-    this.modalBody = this.root.querySelector('.modal-body');
+    this.modalBody = this.root.querySelector('#window .modal-body');
 
     const _form = new Contact(this.modalBody);
     _form.init();

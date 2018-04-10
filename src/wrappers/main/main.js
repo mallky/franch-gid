@@ -2,6 +2,7 @@ import './main.less';
 import $ from 'jquery';
 import { Column } from '../../../utils/utils';
 import ModalWindow from '../../components/modal-window/modal-window';
+import ModalWindowCall from '../../components/modal-window-call/modal-window-call';
 import DoneModalWindow from '../../components/send-done/send-done';
 import FailModalWindow from '../../components/send-failed/send-fail';
 import GidFirst from '../../blocks/gid-first/gid-first';
@@ -21,6 +22,7 @@ export default class Main extends Column {
     const mainContainer = this.root.querySelector('main');
 
     const modalWindow = new ModalWindow(this.root.querySelector('.modal-btn-wrapper'));
+    const modalWindowCall = new ModalWindowCall(this.root.querySelector('.modal-btn-wrapper-call'));
     const doneModalWindow = new DoneModalWindow(this.root.querySelector('.done-btn-wrapper'));
     const failModalWindow = new FailModalWindow(this.root.querySelector('.fail-btn-wrapper'));
     const gidFirst = new GidFirst(mainContainer);
@@ -33,6 +35,7 @@ export default class Main extends Column {
     const map = new Map(mainContainer);
 
     modalWindow.init();
+    modalWindowCall.init();
     doneModalWindow.init();
     failModalWindow.init();
     gidFirst.init();
