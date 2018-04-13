@@ -18,7 +18,3 @@ class App {
 const app = new App();
 
 app.init();
-
-if (process.env.NODE_ENV !== 'production') {
-  console.log('Dev mode On!');
-}
